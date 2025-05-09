@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cairo Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>Cairo Store</h1>
+        </div> 
+        <!-- search bar -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search..." onfocus="this.placeholder=''" onblur="this.placeholder='Search...'">
+            <button type="submit">Search</button>
+        </div>
+        <!-- Porfile icon -->
+        <div class="icons">
+            <div class="profile-icon">
+            <button onclick="window.location.href='login-register.html'"><img src="images/Untitled white.png" alt="Profile Icon"></button>
+            </div>
+            <div class="cart-icon">
+            <button onclick="window.location.href='shopping-cart.html'"><img src="images/Untitled-3.png" alt="Cart Icon"></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Nav -->
+    <nav>
+        <ul>
+           <!-- home button -->
+            <li><button onclick="scrollToTop()">Home</button></li>
+            <script>
+                function scrollToTop() {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            </script>
+
+            <li>
+                <button class="dropdown" onclick="toggleDropdown()">Categories</button>
+                <ul id="dropdown" style="display: none;">
+                    <li class="dropdown-items">Action</li>
+                    <li  class="dropdown-items">Adventure</li>
+                    <li class="dropdown-items">RPG</li>
+                    <li class="dropdown-items" >Sports</li>
+                </ul>
+            </li>
+            <script>
+                function toggleDropdown() {
+                    var dropdown = document.getElementById("dropdown");
+                    if (dropdown.style.display === "none") {
+                        dropdown.style.display = "block";
+                    } else {
+                        dropdown.style.display = "none";
+                    }
+                }
+            </script>            
+            <li><button>On Sale</button></li>
+            <li><button>Best Sellers</button></li>
+            <li><button onclick="window.location.href='faq.html'">FAQ</button></li>
+
+
+
+            <!-- contact us button -->
+            <li><button onclick="scrollToBottom()">Contact Us</button></li>
+            <script>
+                function scrollToBottom() {
+                    document.querySelector('.contact-us').scrollIntoView({ behavior: 'smooth' });
+                }
+            </script>
+
+            <li><button></button></li>
+        </ul>
+    </nav>
+
+    <!-- Intro -->
+    <section class="intro">
+        <h2>Welcome to Cairo Store</h2>
+        <p>Your one-stop shop for the latest and greatest in gaming. Explore our wide selection of games and accessories, and enjoy a seamless shopping experience.</p>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Products -->
+<section class="products">
+    <div class="product-list">
+        <div class="product-item">
+            <a href="product details/product details 1.html"><img src="images/gta.jpg" alt="Grand Theft Auto 5"></a>
+            <h3>Grand Theft Auto 5</h3>
+            <p>Price: $59.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <a href="product details/product details 2.html"><img src="images/images.jpg" alt="The Witcher 3: Wild Hunt"></a>
+            <h3>The Witcher 3: Wild Hunt</h3>
+            <p>Price: $59.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <a href="product details/product details 3.html"><img src="images/download (1).jpg" alt="Red Dead Redemption 2"></a>
+                <h3>Red Dead Redemption 2</h3>
+            <p>Price: $59.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <a href="product details/product details 4.html"><img src="images/download.jpg" alt="Cyberpunk 2077"></a>
+        <h3>Cyberpunk 2077
+            <p>Price: $59.99</p>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Contact Us -->
+    <section class="contact-us">
+        <h2>Contact Us</h2>
+        <form action="submit_form.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Back to Top" style="position: fixed; bottom: 20px; right: 20px; display: none;"><img src="images/arrow.png"></button>
+    <script>
+        // Show or hide the button
+        window.onscroll = function() {
+            var button = document.getElementById("back-to-top");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+
+        // Scroll to the top of the page when the button is clicked
+        document.getElementById("back-to-top").onclick = function() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        };
+    </script>
+
+    <footer>
+        <!-- social media links -->
+       
+        <div class="social-media">
+            <p class="msg">Join our community</p>   
+        <div class="social-media-links"> 
+            
+            <a href="https://www.facebook.com" target="_blank">
+            <img src="images/facebook.png" alt="Facebook" class="social-icon">
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+            <img src="images/twitter.png" alt="Twitter" class="social-icon">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+            <img src="images/instagram.png" alt="Instagram" class="social-icon">
+            </a>
+            <a href="https://www.tiktok.com" target="_blank">
+            <img src="images/tik-tok.png" alt="TikTok" class="social-icon">
+            </a>
+        </div>
+    </div>        
+     <p class="copyrights" >© 2024 Cairo Store</p>
+    </footer>
+</body>
+</html>
+<!-- scripts -->

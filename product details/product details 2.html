@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cairo Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <h1>Cairo Store</h1>
+        </div> 
+        <!-- search bar -->
+        <div class="search-bar">
+            <input type="text" placeholder="Search..." onfocus="this.placeholder=''" onblur="this.placeholder='Search...'">
+            <button type="submit">Search</button>
+        </div>
+        <!-- Porifle icon -->
+        <div class="icons" style="display: flex; align-items: center;">
+            <div class="profile-icon" style="margin-right: 10px;">
+                <button onclick="window.location.href='login-register.html'"><img src="../images/Untitled white.png" alt="Profile Icon"></button>
+            </div>
+            <div class="cart-icon">
+                <button onclick="window.location.href='shopping-cart.html'"><img src="../images/Untitled-3.png" alt="Cart Icon"></button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Nav -->
+    <nav>
+        <ul>
+           <!-- home button -->
+           <li><button onclick="window.location.href='../index.html'">Home</button></li>
+
+            <li>
+                <button class="dropdown" onclick="toggleDropdown()">Categories</button>
+                <ul id="dropdown" style="display: none;">
+                    <li class="dropdown-items">Action</li>
+                    <li  class="dropdown-items">Adventure</li>
+                    <li class="dropdown-items">RPG</li>
+                    <li class="dropdown-items" >Sports</li>
+                </ul>
+            </li>
+            <script>
+                function toggleDropdown() {
+                    var dropdown = document.getElementById("dropdown");
+                    if (dropdown.style.display === "none") {
+                        dropdown.style.display = "block";
+                    } else {
+                        dropdown.style.display = "none";
+                    }
+                }
+            </script>            
+            <li><button>On Sale</button></li>
+            <li><button>Best Sellers</button></li>
+            <li><button onclick="window.location.href='../faq.html'">FAQ</button></li>
+
+
+
+
+
+
+
+            <!-- contact us button -->
+            <li><button onclick="scrollToBottom()">Contact Us</button></li>
+            <script>
+                function scrollToBottom() {
+                    document.querySelector('.contact-us').scrollIntoView({ behavior: 'smooth' });
+                }
+            </script>
+
+            <li><button></button></li>
+        </ul>
+    </nav>
+
+
+    <main class="product-details">
+        <h2>Product Details</h2>
+        <div class="product-info">
+            <img src="../images/images.jpg" alt="Product Image">
+            <div class="details">
+                <h3>The Witcher 3: Wild Hunt</h3>
+                <p>The Witcher 3: Wild Hunt is an acclaimed open-world RPG that follows Geralt of Rivia, a monster hunter, on a quest to find his adopted daughter while navigating a richly detailed fantasy world. Known for its deep storytelling, complex characters, and immersive environments, the game offers players a blend of combat, exploration, and decision-driven narratives.</p>
+                <p><strong>Price:</strong> $59.99</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+    <footer>
+        <!-- social media links -->
+       
+        <div class="social-media">
+            <p class="msg">Join our community</p>   
+        <div class="social-media-links"> 
+            
+            <a href="https://www.facebook.com" target="_blank">
+            <img src="../images/facebook.png" alt="Facebook" class="social-icon">
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+            <img src="../images/twitter.png" alt="Twitter" class="social-icon">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+            <img src="../images/instagram.png" alt="Instagram" class="social-icon">
+            </a>
+            <a href="https://www.linkedin.com" target="_blank">
+            <img src="../images/tik-tok.png" alt="LinkedIn" class="social-icon">
+            </a>
+        </div>
+    </div>        
+     <p class="copyrights" >© 2024 Cairo Store</p>
+    </footer>
+</body>
+</html>
